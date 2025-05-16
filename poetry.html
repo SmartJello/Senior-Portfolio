@@ -3,22 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Poetry</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Scroll Poetry</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      font-family: 'Georgia', serif;
+      background: black;
+      color: white;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .header {
+      font-size: 5rem;
+      margin-bottom: 20px;
+      color: #00f7ff;
+    }
+
+    .poem-block {
+      max-width: 800px;
+      font-size: 20px;
+      line-height: 2;
+      white-space: pre-wrap;
+      background: #111;
+      padding: 30px;
+      border-left: 5px solid #00f7ff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    }
+
+    .reflection {
+      max-width: 800px;
+      font-size: 18px;
+      padding: 30px;
+      background: #1e1e1e;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    .emoji-float {
+      font-size: 60px;
+      animation: float 3s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Top Nav Back to Home -->
-  <nav class="navbar">
-    <a href="index.html">🏠 Home</a>
-  </nav>
-
-  <main class="poetry-page">
-    <div class="emoji-header">🖋️</div>
-
-    <section class="poem-section">
-      <h2>My "I Am From" Poem</h2>
-      <pre class="poem-block">
+  <section>
+    <div class="emoji-float">🖋️</div>
+    <div class="header">My "I Am From" Poem</div>
+    <div class="poem-block">
 I am from the screen glow of midnight cartoons,  
 From Hot Cheetos and Nintendo DS.  
 I am from the backyard trampoline,  
@@ -28,22 +78,23 @@ I am from photos on the fridge and
 "Finish your homework first" on loop.  
 I am from laughter, loud debates, and  
 the smell of mom’s arroz con pollo.
-      </pre>
-    </section>
+    </div>
+  </section>
 
-    <section class="reflection-section">
-      <h2>Poem That Moved Me</h2>
+  <section>
+    <div class="emoji-float">📜</div>
+    <div class="header">Poem That Moved Me</div>
+    <div class="reflection">
+      <p><strong>Selected Poem:</strong> “Still I Rise” by Maya Angelou</p>
       <p>
-        <strong>Selected Poem:</strong> “Still I Rise” by Maya Angelou
+        This poem resonates deeply with me because of its unshakeable tone of resilience.
+        Each stanza builds like a chant, reaffirming self-worth and strength in the face of adversity.
+        As a student navigating challenges in identity, future, and culture, Angelou's words feel like armor.
+        The poem gave me a voice, when I wasn’t sure I had one.
+        That’s why it belongs here, forever embedded in my senior reflection.
       </p>
-      <p>
-        This poem resonates deeply with me because of its unshakeable tone of resilience. 
-        Each stanza builds like a chant, reaffirming self-worth and strength in the face of oppression...
-        <!-- (Insert your real 300-500 word reflection here!) -->
-      </p>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <script src="js/main.js"></script>
 </body>
 </html>
