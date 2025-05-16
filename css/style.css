@@ -1,74 +1,73 @@
+/* Reset and Base Styles */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background: url('images/sidebar-bg.jpg') no-repeat center center;
+  background-size: cover;
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 20px;
+  overflow-y: auto;
 }
 
-.navbar {
-  background: rgba(0, 0, 0, 0.4);
-  padding: 12px;
-  width: 100%;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-  backdrop-filter: blur(8px);
-}
-.navbar a {
+.sidebar-nav a {
   color: #ffffff;
-  margin: 0 15px;
   text-decoration: none;
+  margin: 10px 0;
   font-weight: bold;
+  display: block;
+  transition: color 0.3s;
 }
-.navbar a:hover {
+
+.sidebar-nav a:hover {
   color: #00f7ff;
 }
 
-.home-container {
-  margin-top: 120px;
-  text-align: center;
-  position: relative;
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  padding: 40px;
+  overflow-y: auto;
 }
 
 .central-home {
-  font-size: 70px;
-  padding: 50px 70px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  box-shadow: 0 8px 30px rgba(0, 255, 255, 0.4);
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-  margin-bottom: 60px;
 }
 
 .orbital-links {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 30px;
-  max-width: 900px;
-  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .orbit {
-  padding: 16px;
-  font-size: 18px;
-  text-align: center;
-  border-radius: 20px;
+  padding: 16px 24px;
   background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
   color: #111;
   text-decoration: none;
   font-weight: bold;
+  border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease-in-out;
-  transform: perspective(800px) rotateX(5deg) rotateY(5deg);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .orbit:hover {
-  transform: scale(1.08) perspective(800px) rotateX(0deg) rotateY(0deg);
+  transform: scale(1.08);
   box-shadow: 0 12px 35px rgba(0, 255, 255, 0.6);
 }
