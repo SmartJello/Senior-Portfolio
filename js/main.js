@@ -9,4 +9,3 @@ items.forEach(item => {
     label.textContent = '\u00A0';
   });
 });
-
