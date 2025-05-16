@@ -39,3 +39,40 @@ body {
 .emoji-item:hover {
   transform: scale(2);
 }
+
+
+
+
+
+
+
+.poetry-page {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.emoji-header {
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+
+.poem-section, .reflection-section {
+  background: #1e1e1e;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+.poem-block {
+  white-space: pre-wrap;
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  color: #dddddd;
+  background: #111;
+  padding: 20px;
+  border-left: 5px solid #00f7ff;
+  border-radius: 6px;
+}
+
