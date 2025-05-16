@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Shapes Interaction</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      perspective: 1000px;
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .shape {
+      width: 150px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(135deg, #00f7ff, #0072ff);
+      border-radius: 20px;
+      transition: transform 0.6s ease, box-shadow 0.6s ease;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+
+    .shape:hover {
+      transform: rotateY(25deg) rotateX(15deg) scale(1.05);
+      box-shadow: 0 20px 40px rgba(0, 255, 255, 0.4);
+    }
+
+    .diamond {
+      transform: rotate(45deg);
+    }
+
+    .circle {
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ff69b4, #ff1493);
+    }
+
+    .cube {
+      background: linear-gradient(135deg, #8a2be2, #4b0082);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="shape cube">🧊</div>
+    <div class="shape diamond">💎</div>
+    <div class="shape circle">🔵</div>
+  </div>
+</body>
+</html>
